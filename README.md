@@ -1,5 +1,6 @@
 # Weather App With Node.Js
 ## A Simple Weather App With Node.Js And Express.Js And ``` open source weather API ```
+### API Url : http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=68cef33e0cd7fa77f8b5e1c02a81f432
 
 ## dependencies 
 
