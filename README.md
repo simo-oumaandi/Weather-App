@@ -1,8 +1,6 @@
 # Weather App With Node.Js
 ## A Simple Weather App With Node.Js And Express.Js And ``` open source weather API ```
 
-### ```View Demo``` :  https://nodejs-weather-app-demo.herokuapp.com
-
 ## dependencies 
 
 | dependencies              | Version     |
