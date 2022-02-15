@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  {{>headerlink}}
+</head>
+
+<body>
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+              <div class="main_content">
+                  <form class="temp_form">
+                      <input type="text" id="cityName" placeholder="قم بادخال اسم مدينتك هنا" autocomplete="off">
+                      <input type="submit" value="بحث" id="submitBtn">
+                  </form>
+              </div>
+              <div class="tempinfo">
+                <div class="top_layer">
+                  <p id="day">Wednesday</p>
+                  <p id="date">Aug 15</p>
+                </div>
+                <div class="main_layer">
+                  <p id="city_name"> المدينة </p>
+                  <div class="middle_layer data_hide">
+                    <p ><span id="temp">0</span><sup>o</sup>C</p>
+                    <p id="temp_status"><i class="fas fa-cloud fa"></i></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+ <script src="js/main.js"></script>
+ <script> 
+   const getCurrentDay =()=>{
+    let weekday=new Array(7);
+    weekday[0]="الأحد";
+    weekday[1]="الاثنين";
+    weekday[2]="الثلاثاء";
+    weekday[3]="الأربعاء";
+    weekday[4]="الخميس";
+    weekday[5]="الجمعة";
+    weekday[6]="السبت";
+    
+    let currentTime=new Date();
+    let days=weekday[currentTime.getDay()];
+    let day=document.getElementById('day');
+    day.innerText=days;
+   };
+   const getDate =()=>{
+    let month=new Array(12);
+     month["1"]="فبراير";
+     month["2"]="مارس";
+     month["0"]="يناير";
+     month["3"]="ابريل";
+     month["4"]="ماي";
+     month["5"]="يونيو";
+     month["6"]="يوليوز";
+     month["7"]="غشت";
+     month["8"]="شتنبر";
+     month["9"]="اكتوبر";
+     month["10"]="نونبر";
+     month["11"]="دجنبر";
+     
+     let currentMonth=new Date();
+     let months=month[currentMonth.getMonth()];
+     let d = new Date();
+
+     let dates=d.getDate();
+     let current_month=document.getElementById('date');
+     current_month.innerText=`${dates} ${months}`;
+
+    
+
+   }
+   getCurrentDay();
+   getDate();
+ </script>
+</body>
+
+</html>
